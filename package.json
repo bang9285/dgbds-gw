@@ -1,6 +1,7 @@
 {
     "name": "react-dgb-ds",
     "version": "1.0.0",
+    "homepage": "/react-dgb-ds",
     "description": "DGB DS GroupWare",
     "main": "src/index.js",
     "scripts": {
@@ -83,7 +84,7 @@
         "react-dom": "^16.9.0",
         "react-redux": "^7.1.0",
         "react-router-dom": "^5.0.1",
-        "react-scripts": "^2.1.3",
+        "react-scripts": "^3.1.2",
         "react-transition-group": "^2.5.1",
         "redux": "^4.0.4",
         "redux-thunk": "^2.3.0",

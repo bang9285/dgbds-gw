@@ -5,18 +5,27 @@ import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 
 import store from './store';
-import App from './components/App';
-import reset from './constants/css/reset';
+import App from './App';
+import Access from './pages/Access';
+// import reset from './constants/css/reset';
 
-const GlobalStyle = createGlobalStyle`${reset}`;
+
+import 'babel-polyfill';
+import 'primeflex/primeflex.css';
+import 'primereact/resources/primereact.min.css';
+
+// const GlobalStyle = createGlobalStyle`${reset}`;
 
 ReactDOM.render(
+
     <BrowserRouter>
         <Fragment>
             <Provider store={store}>
-                <App />
+                {console.log(process.env.PUBLIC_URL)}
+                {/* <App /> */}
+                <Access />
             </Provider>
-            <GlobalStyle />
+            {/* <GlobalStyle /> */}
         </Fragment>
     </BrowserRouter>,
     document.getElementById('root')

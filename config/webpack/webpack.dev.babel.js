@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     output: {
         filename: '[name].js',
-        path: paths.outputPath,
+        path: paths.publicPath,
         chunkFilename: '[name].js'
     },
     performance: {
@@ -26,7 +26,7 @@ module.exports = {
         }
     },
     devServer: {
-        contentBase: paths.outputPath,
+        contentBase: paths.publicPath,
         compress: true,
         hot: true,
         historyApiFallback: true
@@ -35,6 +35,10 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new Jarvis({
             port: 1337
+        }), 
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.PUBLIC_URL': ''
         })
     ]
 };
